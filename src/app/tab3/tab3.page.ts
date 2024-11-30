@@ -6,7 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  quetzales: number = 0;
+  yenes: number = 0;
 
   constructor() {}
 
+  convertir() {
+    const tasaCambio = 0.051;
+    this.yenes = Number((this.quetzales / tasaCambio).toFixed(2));
+  }
 }
